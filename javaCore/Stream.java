@@ -1,6 +1,5 @@
 import java.util.*;
 import java.util.stream.*;
-import java.util.List;
 
 class Stream {
 
@@ -42,5 +41,14 @@ class Stream {
         System.out.println();
         int value=nums.stream().filter(x -> x%2==0).reduce(0,(ans,i) -> ans+i);
         System.out.println(value);
+
+
+        Queue <Integer> pq=new LinkedList<>();
+        pq.add(10);
+        pq.add(20);
+        pq.add(15);
+        System.out.println(pq.peek());
+        System.out.println(pq.poll());
+        System.out.println(pq.peek());
     }
 }
