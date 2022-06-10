@@ -23,7 +23,7 @@ class Stream {
         System.out.println(even);
 
         // Using filter(), Finding Strings
-        List <String> st=strs.stream().filter(s -> s.startsWith("K")).collect(Collectors.toList());
+        List <String> st=strs.stream().filter(s -> s.endsWith("n")).collect(Collectors.toList());
 
         System.out.println(st);
 
