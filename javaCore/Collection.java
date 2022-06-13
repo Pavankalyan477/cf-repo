@@ -17,7 +17,22 @@ class Collection{
         System.out.println(list1);
         list = Stream.concat(list1.stream(),list2.stream()).collect(Collectors.toList());
 
-        System.out.println(list);
+        System.out.println();
+
+
+        Map <Integer, Character> map1=new HashMap<>();
+
+        map1.put(1,'A');
+        map1.put(2,'B');
+
+        Map <Integer,Character> map2=new HashMap<>();
+
+        map2.put(3,'C');
+        map2.put(4,'D');
+
+        map1.putAll(map2);
+        System.out.println(map1);
+
 
         
     }
