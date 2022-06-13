@@ -17,7 +17,7 @@ class Collection{
         System.out.println(list1);
         list = Stream.concat(list1.stream(),list2.stream()).collect(Collectors.toList());
 
-        System.out.println();
+        System.out.println(list);
 
 
         Map <Integer, Character> map1=new HashMap<>();
@@ -30,8 +30,13 @@ class Collection{
         map2.put(3,'C');
         map2.put(4,'D');
 
-        map1.putAll(map2);
-        System.out.println(map1);
+        // map1.putAll(map2);
+        // System.out.println(map1);
+
+        //
+        Map <Integer,Character> map=Stream.of(map1,map2).flatMap(m -> m.entrySet().stream()).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
+
+       System.out.println(map);
 
 
         
