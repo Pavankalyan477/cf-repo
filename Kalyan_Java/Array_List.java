@@ -3,7 +3,7 @@ package Kalyan_Java;
 import java.util.*;
 
 import javax.sound.sampled.SourceDataLine;
-class Main{
+class Array_List{
 
 
 //Exercise 6 //
