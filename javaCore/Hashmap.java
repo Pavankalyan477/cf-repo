@@ -112,11 +112,12 @@ class Hashmap {
 
         // 11.to get a set view of the keys contained in this map.
 
-        Set st=map1.keySet();
+        Set<Integer> st=map1.keySet();
         System.out.println(st);
 
         // 12. to get a collection view of the values contained in this map
         System.out.println(map1.values());
+        
 
     }
 }

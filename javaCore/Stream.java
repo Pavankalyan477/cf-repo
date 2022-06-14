@@ -99,7 +99,13 @@ class Stream {
 
        res.clear();
        int H=nums.stream().mapToInt(Integer::intValue).sum();
-       System.out.println(H);
+
+       int val=map.entrySet().stream().mapToInt(x ->x.getValue()).sum();
+       System.out.println(val);
+
+       Set <Integer> set=map.entrySet().stream().map(x -> x.getValue()*2).collect(Collectors.toSet());
+
+       System.out.println(set);
 
     }
 
