@@ -94,7 +94,7 @@ class Arraylist {
     static ArrayList<String> Clone(ArrayList<String> list1) {
         // System.out.println(list1);
 
-        ArrayList<String> list = (ArrayList<String>) list1.clone();
+        ArrayList<String> list = (ArrayList<String>)list1.clone();
 
         return list;
     }
