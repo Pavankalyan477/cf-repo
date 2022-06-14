@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.*;
 
 class Stream {
@@ -81,6 +82,25 @@ class Stream {
         strm.forEach(System.out::println);
 
        // Stream<int[]> stream = Stream.of(arr);
-        //Stream<int[]> strm2=Stream.of(arr);
+
+       HashMap <String,Integer> map=new HashMap<>();
+       map.put("books", 100);
+       map.put("pens", 50);
+       map.put("pencils",60);
+       map.put("notes", 30)  ;
+       
+       Map<String,Integer> res=map.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(e1,e2)->e1,LinkedHashMap::new));
+       
+       System.out.println(res);
+
+       res.clear();
+       res=map.entrySet().stream().filter(p -> p.getKey().equalsIgnoreCase("Pencils")).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
+       System.out.println(res);
+
+       res.clear();
+       int H=nums.stream().mapToInt(Integer::intValue).sum();
+       System.out.println(H);
+
     }
+
 }
