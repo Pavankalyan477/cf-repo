@@ -4,11 +4,11 @@ public class Carmain {
     private int invYear;
     private String color;
 
-    Carmain(String carBrand, int invYear, String color) {
-        this.carBrand = carBrand;
-        this.invYear = invYear;
-        this.color = color;
-    }
+    // Carmain(String carBrand, int invYear, String color) {
+    //     this.carBrand = carBrand;
+    //     this.invYear = invYear;
+    //     this.color = color;
+    // }
 
     public void setcarBrand(String brand){
        this.carBrand=brand;
@@ -36,7 +36,8 @@ public class Carmain {
 
     public static void main(String[] args) {
 
-        Carmain obj=new Carmain("TATA", 2000, "White");
+        Carmain obj=new Carmain();
+       
        
         System.out.println(obj.getColor());
         System.out.println(obj.getcarBrand());

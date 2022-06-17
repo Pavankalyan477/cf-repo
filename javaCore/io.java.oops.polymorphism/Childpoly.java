@@ -3,7 +3,7 @@
 public class Childpoly extends Polymor{
 
 
-    @Override
+    //@Override
     void show(){
         System.out.println("Method overriding by Child");
     }
@@ -14,8 +14,9 @@ public class Childpoly extends Polymor{
         Polymor obj1=new Childpoly();
         obj1.show();
 
-        Polymor obj2=new Polymor();
-        obj2.show();
+        // Polymor obj2=new Polymor();
+        // obj2.show();
+        obj1.sum(9);
     }
 
 
