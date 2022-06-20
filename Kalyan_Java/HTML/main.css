@@ -99,7 +99,11 @@ hr {
 .FAQ>h1{
  text-align: center;
 }
-
+.questions{
+    display: grid;
+    margin-left: 100px;
+    font-size: 30px
+}
 body{
     background-color:aliceblue;
 }
