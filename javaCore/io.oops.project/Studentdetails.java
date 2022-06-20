@@ -1,5 +1,8 @@
-public class Studentdetails extends Commondetails {
-    
+public class Studentdetails extends Commondetails  implements  method{
+
+//    public void go(){
+//        System.out.println("I am in student class");
+//    }
     int fee;
 
 
@@ -11,7 +14,8 @@ public class Studentdetails extends Commondetails {
     }
 
     public static void main(String[] args) {
-        
+   Studentdetails st = new Studentdetails(100,"pk","",0);
+   st.go();
     }
 
 
