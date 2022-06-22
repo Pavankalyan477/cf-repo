@@ -1,0 +1,47 @@
+body {
+  justify-content: center;
+  background-color: black;
+}
+
+#form {
+  width: 40%;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.btn {
+  height: 50px;
+  width: 40%;
+  /* float: right; */
+  margin-left: 62%;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  font-size: 17px;
+}
+.btn1 {
+  margin-left: 82%;
+  border-radius: 5px;
+  color: white;
+  font-size: 17px;
+  background-color: black;
+  cursor: pointer;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
