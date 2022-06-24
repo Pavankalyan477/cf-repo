@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+}
+
+.details{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    /* color: white; */
+    /* background-color: black; */
+}
+label{
+    font-size: medium;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#name,#id,#mail,#phone{
+    height: 40px;
+    width: 55%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+select{
+    height: 40px;
+    width: 55%;
+    border-radius: 5px;
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+#btnd{
+    height: 50px;
+    width:35% ;
+    background-color: #008CBA;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a{
+    height: 50px;
+    width:35% ;
+    background-color: #008CBA;
+    font-size: 18px;
+    color: white;
+   text-decoration: none;
+    cursor: pointer;
+}
+#error{
+    color: red;
+    display: none;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+}
+th{
+    width: 50%;
+}
+table{
+    width: 60%;
+    margin: auto;
+}

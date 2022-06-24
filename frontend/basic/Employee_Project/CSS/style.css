@@ -1,0 +1,62 @@
+
+body{
+    margin: auto;
+   background-color: black;
+   color: white;
+}
+
+.navbar{
+    height: 50px;
+    width: 100%;
+    background-color: cyan;
+   text-align: center;
+   color: rgb(3, 27, 165);
+    position: fixed;
+    top:0;
+}
+
+.addData{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+.btnt{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+.btn{
+    height: 50px;
+    width: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    background-color: deepskyblue;
+    font-size: 15px;
+}
+a{
+    color: white;
+    height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table, tr, th, td{
+    border: 1px solid rgb(247, 73, 20);
+    background-color: white;
+    color: black;
+   
+
+}
+th{
+    width: 50%;
+    padding-right: 100px;
+}
+table{
+    width: 50%;
+    margin: auto;
+}
+#tbl{
+    display: none;
+}
