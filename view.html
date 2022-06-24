@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-List</title>
+   <link rel="stylesheet" href="up.css">
+    
+</head>
+<body onload="getData()">
+    <h1> Enter the details</h1>
+
+    <button  id = "add" onclick="add();getData()">Add</button>
+    
+  
+  
+   <div id ="tab">
+
+       <label for="Name">Name</label>
+          <input type="text"  id="Name" required>
+       <label for="id">ID</label>
+           <input type="text" id="id" >
+       <label for="mob">Mobile-number</label>
+            <input type="number" id="mob" >
+       <label for="email">E-mail</label>
+             <input type="email" id="email">
+      <label for="dsgn">Designation</label>
+             <input type="text" id="dsgn" >
+    
+   <div>
+
+     
+
+   <script src="Js_files/update.js" ></script>
+   
+        <div id ="table">
+            <table  id = "tables" border="10">
+
+              <tr>
+                    <td>S.NO</td>
+                    <td>Name </td>
+                    <td>Id </td>
+                    <td>Mobile </td>
+                    <td>E-Mail </td>
+                    <td>Designation </td>
+                    <td>Action </td>
+                </tr>
+                <tbody id = "tbodyRows" ></tbody>
+                    
+            </table>
+           </div>
+        
+          
+</body>
+</html>
