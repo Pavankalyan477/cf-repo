@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANGULAR JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/version.json"></script>
+    <script src="../scripts//main.js"></script>
+  </head>
+  <body >
+    <div ng-controller="myController">
+       <!-- <div>FIRST NAME:{{emp.first}}</div>
+       <div>LAST NAME :{{emp.last}}</div>
+       <div>
+            <img ng-src="{{emp.icon}}" alt="{{emp.first}}" style="height: 100px; width:100px"/>
+       </div> -->
+       <!-- <div>
+        <table>
+            <tr>
+                <td>FIRST NAME</td>
+                <input type="text" ng-model="emp.first">
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <input type="text" ng-model="emp.last">
+            </tr>
+            <tr>
+                <td>AGE</td>
+                <input type="text" ng-model="emp.age">
+            </tr>
+
+            <tr>
+                <td>FIRST NAME</td>
+               <div>{{emp.first}}</div>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <div>{{emp.last}}</div>
+            </tr>
+            <tr>
+                <td>AGE</td>
+                <div>{{emp.age}}</div>
+            </tr>
+        </table>
+        <div>
+        </div>
+       </div> -->
+
+
+
+       <!-- <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>LIKES</th>
+                    <th>DISLIKES</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tc in tech">
+                    <td>{{tc.name}}</td>
+                    <td>{{tc.likes}}</td>
+                    <td>{{tc.dislikes}}</td>
+                    <td>
+                        <input type="button" value="like" ng-click="incrlikes(tc)">
+                        <input type="button" value="dislike" ng-click="incrdislikes(tc)">
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+       </div>
+    </div> -->
+    <div>
+        {{myURL}}
+    </div>
+    <div>{{data}}</div>
+  </body>
+</html>

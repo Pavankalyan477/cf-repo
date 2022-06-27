@@ -7,6 +7,11 @@
     <title>ADD Employees</title>
     <link rel="stylesheet" href="../CSS//style.css" />
     <link rel="stylesheet" href="../CSS//details.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../Scripts/main.js"></script>
+    <script src="../Scripts//script.js"></script>
+    <script src="../Scripts/Update.js"></script>
+    <script src="../Scripts/Validate.js"></script>
   </head>
   <body onload="init()">
     <div class="values">
@@ -18,8 +23,8 @@
         <h4>To Enter and Add Employees Details, Click on Below Button</h4>
         <br />
         <div class="btnt">
-          <button onclick="AddEmp()" class="btn">ADD EMPLOYEE</button>
-          <button onclick="ShowEmp()" class="btn">VIEW EMPLOYEE</button>
+          <button id="btn1" class="btn">VIEW EMPLOYEE</button>
+          <!-- <button id="btn2"  class="btn">VIEW EMPLOYEE</button> -->
         </div>
        
       </div>
@@ -58,7 +63,8 @@
             id="phone"
             placeholder="Enter Employee Mobile No"
             required
-            value.length="10"
+           min="6000000000"
+           max="9999999990"
           />
           <br />
           <br />
@@ -79,6 +85,7 @@
         </form>
       </div>
 
+
       <div id="tbl" >
         <table class="list" id="employeeList">
           <thead>
@@ -89,7 +96,7 @@
               <th>EMAIL</th>
               <th>MOBILE NO</th>
               <th>DESIGNATION</th>
-              
+
               <th>ACTIONS</th>
             </tr>
           </thead>
@@ -101,4 +108,5 @@
   
   </body>
 </html>
-<script src="../Scripts//script.js"></script>
+
+
