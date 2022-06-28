@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- <script src="../scripts/Angularscript.js"></script> -->
+    <script src="../scripts/Todo.js"></script>
+    <style>
+        table,th,tr,td{
+            border: 1px solid black;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body  ng-app="todoModule" >
+    <div ng-controller="todoController" >
+       <h1>MY TODO LIST</h1>
+       <form ng-submit>
+        <input type="text" id="Text" ng-model="inputTodo" placeholder="Enter TODO " />
+        <!-- <input type="button" value="ADD"> -->
+        <button ng-click="addTodo()">ADD</button>
+       </form>
+       <br>
+
+       <table>
+            <thead>
+                <tr>
+                    <th>
+                        LIST NAMES
+                    </th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="x in todoData track by $id(x)" >
+                <tr  ng-model="ed" >
+                    <td><input  ng-model = "action[$index]" ng-readonly="value"></td>
+                    <td><button ng-click="todoUpdate($index)"  >{{ed[$index]}}</button>
+                    <button ng-click="todoRemove($index)">DELETE</button> </td>
+                </tr>
+            </tbody>
+       </table>
+       
+    </div>
+</body>
+
+</html>
