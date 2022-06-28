@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomEvent</title>
+</head>
+<body>
+    
+    <!-- <h1 onclick="this.innerHTML='Opps!'">Click on me</h1> -->
+
+    <h1>JS HTML event</h1>
+
+    <h2 onclick="changeText(this)"> Click on me</h2>
+
+    <p id="demo"> Date ? </p>
+
+    <button onclick="getDate()">Click</button>
+
+    <script>
+
+        function changeText(obj){
+
+            obj.innerHTML = "OPPS!";
+        }
+
+        function getDate(){
+
+            document.getElementById("demo").innerHTML=Date();
+        }
+
+    </script>
+
+    <div onmouseover="moveOver(this)" onmouseout="moveOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse over me
+    </div>
+
+    <script>
+
+        function moveOver(obj){
+
+            obj.innerHTML="Thank you";
+        }
+
+        function moveOut(obj1){
+
+            obj1.innerHTML = "mouse move on";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+table, td {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+  }
+  
+
+  .myDiv {
+    border: 5px outset red;
+    background-color: lightblue;    
+    text-align: center;
+    width: 80%;
+    margin-top: auto;
+    margin-left: 10%;
+  }

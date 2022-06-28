@@ -1,0 +1,107 @@
+
+body {
+        background-color: transparent;
+        font-family: ShopifySans, Helvetica, Arial, Lucida Grande, sans-serif;
+      }
+
+#home {
+        width: 80%;
+        margin: auto;
+        /* background-color: rgb(188, 231, 231); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+      }
+
+      
+.text1 > h1{
+
+        font-size: 85px;
+        text-align: center;
+        margin: auto;
+    
+}
+
+.text1 > h2{
+
+        font-size: 30px;
+        text-align: center;
+        margin: auto;
+        font-family: "Times New Roman", Times, serif;
+    
+}
+
+
+.inp {
+        text-align: center;
+        grid-row: auto;
+      }
+
+
+.inp > input {
+        height: 50px;
+        width: 100%;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+
+
+.inp > button {
+        height: 55px;
+        width: 50%;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 5px;
+
+        box-shadow: 2px 2px #888888;
+}
+
+.text3 > p {
+        width: 35%;
+        margin: auto;
+        text-align: center;
+        font-size: smaller;
+        padding-top: 40px;
+}
+
+
+.cart {
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+}
+
+.templets{
+
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        grid-gap: 5%;
+        margin: auto;
+        justify-content: center;
+        margin-top: 100px;
+        padding-bottom: 8%;
+}
+
+.templates_data > img {
+        height: 50px;
+        width: 50px;
+      }
+
+
+.all_icons{
+
+        flex-direction: row;
+        justify-content: center;
+        gap: 2%;
+        display: flex;
+}

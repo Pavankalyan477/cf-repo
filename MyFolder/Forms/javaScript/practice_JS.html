@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="demo"> Heading changed</h1>
+
+    <button type="button" onclick="myFunction()">Click</button>
+
+    <P id="demo1"></P>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+
+    <p id="demo6"></p>
+
+    <script>
+
+        function myFunction(){
+            document.getElementById("demo").innerHTML='Changed';
+        }
+
+        const cars = ["volvo","suzuki","creta","harriar"];
+        let cars_len = cars.length;
+
+        let text = "<ul>";
+        for (let i=0;i<cars_len;i++){
+
+            text+= "<li>" + cars[i] + "</li>";
+        }
+
+        text+="</ul>";
+
+        document.getElementById("demo1").innerHTML=text;
+
+        const fruits =  ["Banana","Apple","Orange","Mango"];
+
+        document.getElementById("demo2").innerHTML = "Element befor sorting :- "+fruits;
+
+        fruits.sort();
+
+        document.getElementById("demo3").innerHTML = "Element after spoting :- "+fruits;
+
+        fruits.reverse()
+
+        document.getElementById("demo4").innerHTML = fruits;
+
+        let num = [4,3,5,4,3,5]
+
+        num.sort(function(a,b) {return a-b});
+
+        document.getElementById("demo5").innerHTML = num;
+        
+        const number = [5,2,6,7,9,0];
+
+        let text1 = "";
+
+        for(let i in number){
+            text1+=number[i]+"<br>";
+        }
+
+        document.getElementById("demo6").innerHTML = text1;
+    </script>
+
+
+
+</body>
+</html>

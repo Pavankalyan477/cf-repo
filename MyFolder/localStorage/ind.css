@@ -1,0 +1,24 @@
+.employeInfo{
+
+    text-align: center;
+    margin: 50px;
+}
+
+
+
+table, th, tr{
+
+    border: 1px solid black;
+}
+
+table{
+
+    width: 60%;
+}
+
+
+.table{
+
+    align-items: center;
+}
+

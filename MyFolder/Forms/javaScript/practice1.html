@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p> Please input a number between 5 an 10</p>
+    <input type="text" name="number" id="demo">
+
+    <button onclick="myFunction()"> Test Input</button>
+
+ 
+
+    <p id = "p01"></p>
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <script>
+
+        function myFunction(){
+        let message = document.getElementById("p01");
+        message.innerHTML = "";
+
+        let x = document.getElementById("demo").value;
+
+        try{
+
+            if(x=="") throw "Empty";
+
+            if(isNaN(x)) throw "Not a number";
+
+            x = Number(x);
+
+            if(x<5) throw "too low";
+
+            if(x>10) throw "too high";
+
+        }
+
+        catch(err){
+            message.innerHTML = "Input is "+err;
+        }
+    }
+
+    const person = {
+
+        firstName:'sonu',
+        lastNAme:'Kumar',
+        age:23,
+
+        fullName : function(){
+
+            return this.firstName+" "+this.lastNAme;        }
+    };
+
+    document.getElementById("demo1").innerHTML = person.fullName();
+
+    class car{
+
+        constructor(name, year){
+
+            this.year = year;
+            this.name = name;
+        }
+    }
+
+    const obj = new car("Ford",2014);
+
+    document.getElementById("demo2").innerHTML = obj.name;
+
+
+    class car{
+
+        car(name, year){
+            this.name= name;
+            this.year=year;
+        }
+
+        age(){
+
+            let x = new Date();
+
+            return x.getFullYear-this.year;
+        }
+    }
+    </script>
+</body>
+</html>
