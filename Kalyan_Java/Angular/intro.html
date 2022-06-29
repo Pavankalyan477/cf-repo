@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    </head>
+
+<body ng-app = "myApp"  ng-controller = "mycontroller">
+
+    <h1>TO DO LIST</h1>
+   Activity : <input id ="dat" type = "text" ng-model = "activity">
+   <br>
+   <br>
+   <button  ng-click="add()">Add</button>
+   <div ng-model = "list">
+  
+   <table border="10">
+    <thead>
+        <th>Activity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody  ng-repeat="act in list">
+        <tr>
+            <!-- <td  ><input  type="text" ng-model = "list[$index]"  ng-readonly="read"></td>
+            
+            <td ng-model="ed" >
+                <button type ="button" ng-click="edit($index)">{{ed[$index]}}</button>
+                </button></td>
+                <td><button type ="button" ng-click="delete($index)">delete</button> -->
+
+             <td ><input  type="text" ng-model = "act"  ng-readonly="read"></td>
+            
+            <td ng-model="ed" >
+                <button type ="button" ng-click="edit($index)">{{ed[$index]}}</button>
+                </button></td>
+                <td><button type ="button" ng-click="delete($index)">delete</button>
+        </tr>
+    </tbody>
+   </table>
+
+    
+</body>
+<script>
+    if(JSON.parse(localStorage.getItem("active"))==null){
+        localStorage.setItem("active",JSON.stringify([]));
+    }
+
+    var app = angular.module("myApp",[]).controller("mycontroller",function($scope){
+        var del = 0;
+        
+        $scope.read = "close";
+       
+      $scope.list = JSON.parse(localStorage.getItem("active"))
+      $scope.action =JSON.parse(localStorage.getItem("active"));
+      $scope.ed = [];
+
+      for(var i = 0 ; i<$scope.list.length;i++){
+        $scope.ed[i] = "Edit";
+      }
+     
+      $scope.add=function(){
+        if($scope.activity===""){
+            alert("Filed is empty");
+        }
+       
+        else{
+        $scope.list.push($scope.activity);
+        $scope.action.push($scope.activity);
+        $scope.ed.push("Edit")
+        $scope.activity="";
+        localStorage.setItem("active",JSON.stringify($scope.list))
+
+        }
+      }
+      $scope.delete = function(index){
+        if(del==1){
+            alert("Cant delete the value while updating")
+        }
+        else{
+      $scope.list.splice(index,1);
+      $scope.action.splice(index,1);
+      localStorage.setItem("active",JSON.stringify($scope.list))
+      }
+    }
+
+
+      $scope.edit = function(index){
+      if($scope.ed[index]=="Edit"){
+        del = 1;
+        $scope.ed[index] = "Update"
+        $scope.read="";
+        alert($scope.action[index]);        
+    }
+  
+        else {
+       $scope.ed[index] = "Edit"
+    del = 0 ;
+        alert($scope.action[index]);
+       console.log( $scope.list)
+      $scope.list[index] = $scope.action[index];
+      console.log($scope.list)
+        $scope.read = "close"
+        localStorage.setItem("active",JSON.stringify($scope.list))
+
+    
+       
+      }
+    }
+}   
+    )
+    
+
+</script>
+
+
+</html>

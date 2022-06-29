@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+           
+    </head>
+
+    <body ng-app = "weatherApp"  ng-controller = "mycontroller">
+         <h1>Weather condition</h1>
+         <input type="text" placeholder="enter the city name">
+         <button type="button">Search</button>
+       
+        <div ng-model ="details">
+           
+           
+              <table border="10">
+                   <thead>
+                       <th>City Name</th>
+                       <th>Temperature</th>
+                        <th>Weather Condition</th>
+                   </thead>
+
+                    <tbody ng-repaet = "det in details">
+                       <tr>
+                        <td>{{det.city}}</td>
+                        <td>{{det.city}}</td>
+                        <td>{{det.city}}</td>
+
+
+                       </tr>
+                       
+
+                    </tbody>
+
+
+
+
+              </table>
+
+
+        </div>
+
+
+     </body>
+<script>
+  
+var app = angular.module("weatherApp" ,[]).controller("mycontroller", function($scope ,$http){
+
+
+
+
+
+}
+
+
+
+
+
+
+)
+
+
+</script>
+
+
+
+
+
+
+
+</html>
